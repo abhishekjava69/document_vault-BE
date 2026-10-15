@@ -1,0 +1,22 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: auth-service
+
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521/ORCL
+    username: system
+    password: Hubli@8123
+    driver-class-name: oracle.jdbc.OracleDriver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.OracleDialect
+
+security:
+  jwt:
+    secret: 6v2xG1mQ9fK3rN8dW4aP7zT0cH5jL2sYbV1eA9uR3oI=
+    expiration-ms: 900000
