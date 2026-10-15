@@ -1,0 +1,22 @@
+
+services:
+  api-gateway:
+    build:
+      context: ./api-gateway
+    ports:
+      - "80:8080"
+    depends_on:
+      - auth-service
+    restart: unless-stopped
+
+  auth-service:
+    build:
+      context: ./auth-service
+    expose:
+      - "8081"
+    environment:
+      SERVER_PORT: 8081
+      SPRING_DATASOURCE_URL: ${DB_URL}
+      SPRING_DATASOURCE_USERNAME: ${DB_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
+    restart: unless-stopped
