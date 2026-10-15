@@ -16,7 +16,7 @@ services:
       - "8081"
     environment:
       SERVER_PORT: 8081
-      SPRING_DATASOURCE_URL: jdbc:oracle:thin:@//database-1.cxm0i4s68914.eu-north-1.rds.amazonaws.com:1521/ORCL
-      SPRING_DATASOURCE_USERNAME: admin
-      SPRING_DATASOURCE_PASSWORD: HUBLI8123
+      SPRING_DATASOURCE_URL: ${DB_URL}
+      SPRING_DATASOURCE_USERNAME: ${DB_USERNAME}
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
     restart: unless-stopped
