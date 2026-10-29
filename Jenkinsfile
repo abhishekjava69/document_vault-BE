@@ -22,7 +22,6 @@ pipeline {
             steps {
                 sh '''
                     docker compose \
-                      --env-file /opt/document-vault/.env \
                       -f docker-compose.yml \
                       up -d --build
                 '''
