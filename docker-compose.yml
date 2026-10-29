@@ -4,7 +4,7 @@ services:
     build:
       context: ./api-gateway
     ports:
-      - "8080:8080"
+      - "8082:8080"
     depends_on:
       - auth-service
     restart: unless-stopped
