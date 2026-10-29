@@ -6,9 +6,9 @@ spring:
     name: auth-service
 
   datasource:
-    url: jdbc:oracle:thin:@localhost:1521/ORCL
-    username: system
-    password: Hubli@8123
+    url: jdbc:oracle:thin:@//database-1.cxm0i4s68914.eu-north-1.rds.amazonaws.com:1521/ORCL
+    username: admin
+    password: HUBLI8123
     driver-class-name: oracle.jdbc.OracleDriver
 
   jpa:
