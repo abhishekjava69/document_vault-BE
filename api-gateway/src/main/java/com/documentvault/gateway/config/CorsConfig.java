@@ -23,7 +23,8 @@ public class CorsConfig {
           "http://localhost:8080",
           "https://localhost",
           "http://localhost:8100",
-          "http://192.168.1.25:8100"
+          "http://192.168.1.25:8100",
+          "http://172.28.164.180:8100"
         ));
 
         config.setAllowedMethods(List.of(
